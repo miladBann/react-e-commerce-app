@@ -1,0 +1,676 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.row1 {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.purple {
+  color: #7342d6;
+}
+
+/*################################################*/
+/* spinner for the loading state */
+
+.books_loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 60px;
+  font-size: 60px;
+  color: #7342d6;
+}
+
+.books_loading--spinner {
+  display: none !important;
+}
+
+.books_loading .books_loading--spinner {
+  display: block !important;
+}
+
+
+.fa-spinner {
+  animation: rotate 600ms infinite linear;
+  margin: 0 auto;
+}
+
+@keyframes rotate {
+  0% {
+      transform: rotate(0);
+  }
+
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+/*##########################################
+Navigation bar */
+/*
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+*/
+.navigation ul{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation ul img {
+  width: 200px;
+}
+
+.right_nav {
+  display: flex;
+  width: 20%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.right_nav li {
+  font-size: 20px;
+  font-weight: 600;
+  margin-right: 12px;
+  color:#6415ff;
+}
+
+.right_nav li a {
+  color: #6415ff;
+}
+
+.right_nav li:hover {
+  text-decoration: underline;
+}
+
+.special {
+  border: 3px solid #6415ff;
+  padding: 8px 16px;
+  border-radius: 5px;
+}
+
+.fa-cart-shopping {
+  z-index: -1;
+}
+
+
+.number {
+  border: 2px solid red;
+  height: 100%;
+  width: 100%;
+  font-size: 10px;
+  border-radius: 50%;
+  padding: 2px 4px;
+  font-weight: 600;
+  color: white;
+  background-color: red;
+  z-index: 1;
+  position: relative;
+  right: 4px;
+}
+
+/*################################################*/
+/* burger menu */
+
+.btn__menu {
+  background-color: transparent;
+  font-size: 28px;
+  text-align: center;
+  border: none;
+  color: #6415ff;
+  display: none;
+  cursor: pointer;
+}
+
+.menu__backdrop {
+  border: 0.5px solid lightgray;
+  position: absolute;
+  background-color: white;
+  top: 2%;
+  right: 1%;
+  left: 50%;
+  bottom: 70%;
+  z-index: 100;
+  border-radius: 15px;
+  justify-content: center;
+  align-items: center;
+  transition: all 300ms ease;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.menu--open .menu__backdrop {
+  visibility: visible;
+  opacity: 1;
+}
+
+.menu__links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 12%;
+  height: 70%;
+}
+
+.menu__list {
+  padding: 16px 0px;
+  list-style-type: none;
+}
+
+.cart2 {
+  font-size: 22px;
+}
+
+.menu__link {
+  font-size: 22px;
+  color: #6415ff;
+}
+
+.btn__menu--close {
+  position: absolute;
+  right: 20px;
+  top: 8px;
+  color: #6415ff;
+  cursor: pointer;
+}
+
+.btn_books {
+  border: 3px solid #7342d6;
+  border-radius: 5px;
+  margin-bottom: 12px;
+}
+
+
+/*#########################################
+landing (section 1) */
+
+#section1 {
+  height: calc(100vh + 14vh);
+  background-color: #f0ecfb;
+  padding-top: 5%;
+}
+.container1 {
+  margin-top: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container1 h1 {
+  color: #7342d6;
+  font-size: 56px;
+  width: 40rem;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.container1 h3 {
+  font-size: 32px;
+  margin-bottom: 32px;
+}
+
+.container1 button{
+  font-size: 20px;
+  padding: 12px 24px;
+  border-radius: 5px;
+  border: none;
+  background-color: #7342d6;
+  color: white;
+  font-weight: 400;
+  cursor: pointer;
+  margin-bottom: 24px; 
+}
+
+.container1 button a {
+  color: white;
+}
+
+.container1 figure {
+  width: 100%;
+  text-align: center;
+  z-index: 100;
+}
+.container1 img {
+  height: 100%;
+  max-height: 540px;
+  
+}
+
+/*#########################################
+Highlights (section 2) */
+
+#section2 {
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+}
+
+.container2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh / 3);
+  width: 100vw;
+  background-color: white;
+}
+
+.container2 h3 {
+  margin: 0 auto;
+  font-size: 32px;
+  margin: 10% 0px 3% 0px;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1400px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  left: 5%;
+}
+
+.card {
+  width: calc(100% / 3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.card p {
+  width: 20rem;
+  font-size: 18px;
+}
+
+
+.card h4 {
+  font-size: 20px;
+  width: 15rem;
+  margin-bottom: 8px;
+}
+
+.logoo {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #7342d6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #7342d6;
+  font-size: 32px;
+  border-radius: 5px;
+  margin-bottom:24px;
+}
+
+/*#########################################
+featured books (section 3) */
+
+#section3 {  
+  margin-top: 20vh;
+  background-color: #f0ecfb;
+  padding-top: 1%;
+}
+
+.container3 h3 {
+  font-size: 32px;
+  margin: 64px 0px;
+  width: 100%;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.books {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.book {
+  width: calc(100% / 4);
+  margin-bottom: 42px;
+  transition: all 300ms ease;
+}
+
+.book figure {
+  width: 250px;
+  height: 380px;
+  overflow: hidden;
+  transition: all 300ms ease;
+}
+
+.book img {
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.book figure:hover {
+  scale: 1.055;
+  transition: all 300ms ease;
+}
+
+
+.book h6 {
+  margin: 14px 0px;
+  font-size: 22px;
+  font-weight: 400;
+  color: black;
+}
+
+.book_rating {
+  margin: 0px 0px 8px 0px;
+  font-size: 20px;
+  font-weight: 400;
+  color: gold;
+}
+
+.prices {
+  display: flex;
+}
+
+.discount p {
+  font-size: 20px;
+  color: lightgrey;
+  text-decoration: line-through;
+}
+
+.current_price p {
+  margin-left: 12px;
+  font-size: 20px;
+  color: black;
+}
+
+.two_prices {
+  display: flex;
+}
+
+/*#########################################
+Discounted books (section 4) */
+
+#section4 {
+  margin: 48px 0px;
+  background-color: white;
+}
+
+.container4 h3 {
+  font-size: 32px;
+  width: 100%;
+  text-align: center;
+  margin: 48px 0px;
+  padding: 36px 0px;
+}
+
+/*#########################################
+explore more (section 5) */
+
+#section5 {
+  background-color: #f0ecfb;
+  padding-top: 5%;
+}
+
+.container5 {
+  text-align: center;
+}
+
+.container5 h1 {
+  font-size: 32px;
+  margin-bottom: 32px;
+}
+
+.container5 button {
+  font-size: 20px;
+  padding: 12px 24px;
+  color: white;
+  background-color: #7342d6;
+  font-weight: 400;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 64px;
+}
+
+.container5 button a {
+  color:  white;
+}
+
+/*#########################################
+footer (section 6) */
+
+footer {
+  background-color: #242424;
+  padding: 64px 0px;
+}
+
+.container6 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottom_logo {
+  width: 160px;
+  fill: white;
+  color: white;
+}
+
+.links ul{
+  display: flex;
+  justify-content: space-between;
+  width: 130%;
+  list-style-type: none;
+  margin: 24px 0px;
+  position: relative;
+  right: 32px;
+}
+
+.links ul li a{
+  margin-left: 16px;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+.links ul li a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.container6 p {
+  color: white;
+  font-size: 16px;
+}
+
+/*############################################################
+#############################################################
+#############################################################
+books page */
+
+.filter_selector {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.books_container h3 {
+  text-align: center;
+  font-size: 32px;
+  margin: 32px 0px;
+}
+
+#filter {
+  font-size: 16px;
+  padding: 12px 24px;
+  margin-right: 12px;
+  border-radius: 5px;
+  border: 2px solid #7342d6;
+}
+
+/*############################################################
+##############################################################
+##############################################################
+##############################################################
+#############################################################
+#############################################################
+#############################################################
+#############################################################
+*/
+/* responsive design for phones */
+
+@media (max-width: 768px)
+{
+    /*  burger menu*/
+    .right_nav {
+        display: none;
+    }
+
+    .btn__menu {
+        display: block;
+    }
+
+    html {
+      overflow-x: hidden;
+    }
+    /*##############################*/
+
+    body {
+        padding: 0px 12px;
+    }
+
+    .nav {
+        margin-top: 24px;
+    }
+
+    /*######################################*/
+    /* section 1 */
+    #section1 {
+      width: 100%;
+      height: 125vh;
+    }
+
+    .container1 h1 {
+        font-size: 36px;
+        width: 25rem;
+        margin-top: 36px;
+    }
+
+    .container1 h3 {
+        text-align: center;
+        font-size: 24px;
+        margin-top: 18px;
+    }
+
+    .container1 img {
+        width: 100%;
+        margin-top: 18px;
+        height: 400px;
+    }
+
+    .container1 button {
+        margin-top: 24px;
+    }
+
+    /*######################################*/
+    /* section 2 */
+
+    .wave1, .wave2 {
+        display: none;
+    }
+  
+
+    .container2 {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    .container2 h3 {
+        font-size: 24px;
+        margin-top: 32px;
+    }
+
+    .features {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-right: 10%;
+        text-align: center;
+        padding-left: 30%;
+    }
+
+    .card {
+        margin-bottom: 24px;
+    }
+
+    .card h4 {
+        margin-bottom: 12px;
+    }
+
+    /*######################################*/
+    /* section 3 */
+    
+    #section3 {
+      padding-top: 15%;
+    }
+
+    .container3 h3 {
+        font-size: 24px;
+    }
+
+    .books {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .book {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .book .prices {
+        justify-content: center;
+    }
+
+}
